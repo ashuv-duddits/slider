@@ -13,9 +13,10 @@ block content
             "./assets/images/slides/slide4.jpg",
             "./assets/images/slides/slide5.jpg"
           ]
-        each item in paths
+        each item, ndx in paths
           li.slider__item
             img(src=`${item}`).slider__img
+            span.slider__text #{ndx}
       button.slider__btn-left
         +icon("arrow_down", "arrow_down-icon")
       button.slider__btn-right
