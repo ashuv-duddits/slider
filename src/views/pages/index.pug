@@ -1,1 +1,24 @@
 extends ../main.layout.pug
+
+block content
+  .container.container_slider
+    h1 Тестовый слайдер
+    .slider
+      ul.slider__list
+        - 
+          var paths = [
+            "./assets/images/slides/slide1.jpg",
+            "./assets/images/slides/slide2.jpg",
+            "./assets/images/slides/slide3.jpg",
+            "./assets/images/slides/slide4.jpg",
+            "./assets/images/slides/slide5.jpg"
+          ]
+        each item in paths
+          li.slider__item
+            img(src=`${item}`).slider__img
+      button.slider__btn-left
+        +icon("arrow_down", "arrow_down-icon")
+      button.slider__btn-right
+        +icon("arrow_down", "arrow_down-icon")
+block scripts
+  script(src="./main.bundle.js")

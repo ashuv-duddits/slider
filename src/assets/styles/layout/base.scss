@@ -23,6 +23,12 @@ body {
   max-width: 1180px;
 }
 
+.container_slider{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 svg{
   display: block;
 }
